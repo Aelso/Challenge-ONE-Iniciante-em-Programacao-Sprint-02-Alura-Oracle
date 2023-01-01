@@ -15,7 +15,7 @@
     <link rel="manifest" href="./assets/img/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./assets/img/favicon/ms-icon-144x144.png">
-
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -41,53 +41,10 @@
     </div>
 </header>
 
+
 <body>
-    <h1 class="title">Jogo da Forca - Alura</h1>
-    <main>
-        <div id="game">
-            <div class="textarea-buttons">
-                      <div class="warning">                 
-                    <p>Apenas letras minúsculas e sem acento.</p>
-                </div>        
 
-
-            <div id="menu">
-                <button onclick="startGame()">Começar a jogar</button>
-                <button onclick="addWord()">Add nova palavra</button>
-            </div>
-
-            <div id="new-word" style="display: none;">
-                <textarea name="textarea" id="inputNewWord" placeholder="Digite uma palavra ou frase."></textarea>
-                <button class="save-button" onclick="addNewWord()">Salvar palavra</button>
-                <button class="cancel-button" onclick="cancelAddWord()">Cancelar</button>
-            </div>
-
-            
-
-                <div class="new-word-buttons">
-                    <button onclick="startGame()">Começar jogo</button>
-                    <button onclick="cancelAddWord()">Cancelar</button>
-                </div>
-
-            </div>
-            <div id="game-over" style="display: none;">
-                <img src="./assets/img/!_icon.svg" alt="">
-                <h2 id="game-over-title"></h2>
-
-                <div id="start-game" style="display: none;">
-                    <div class="hangman-game">
-                        <canvas id="hangman" width="1400px" height="1000px"></canvas>
-                        <div class="game-buttons">
-                            <button onclick="startGame()">Novo jogo</button>
-                            <button onclick="giveUpGame()">Desistir</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer>
+        <footer>
         <div class="container">
             <div class="footer">
                 <img src="./assets/img/logo.png" alt="Logo do Jogo da Forca">
@@ -133,8 +90,6 @@
         </div>
     </footer>
 </body>
-<script type="text/javascript" src="./assets/js/script.js"></script>
-<script type="text/javascript" src="./assets/js/canva.js"></script>
-<script type="text/javascript" src="./assets/js/hangman.js"></script>
+
 
 </html>
