@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Jogo da Forca</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/assets/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="logo_a">
+            <img src="./assets/img/Logo.png" alt="Logo da Alura (aoenas a letra 'a')">
+        </div>        
+        <h1 class="titulo">Jogo da Forca - Alura</h1>
+    </header>  
+    
+    <main>
+        <div id="game">
+            <div id="menu">
+                <button onclick="startGame()">Começar a jogar</button>
+                <button onclick="addWord()">Adcionar nova palavra</button>
+            </div>
+
+            <div id="new-word" style="display: none;">
+                <textarea name="" id="inputNewWord" placeholder="Digite uma palavra ou frase."></textarea>
+                <button class="saveWord" onclick="addNewWord()">Salvar palavra</button>
+
+                    <div class="new-word-buttons">
+                        <button onclick="startGame()">Começar jogo</button>
+                        <button onclick="cancelAddWord()">Cancelar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="start-game" style="display: none;">
+                <div class="hangman-game">
+                    <canvas id="hangman" width="1150px" height="950px"></canvas>
+                    <div class="game-buttons">
+                        <button onclick="startGame()">Novo jogo</button>
+                        <button onclick="giveUpGame()">Desistir</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-esquerdo">
+                <p>Desenvolvido por Aelso Rocha Brito.</p>
+
+            </div>
+
+            <div class="footer-meio">
+                Para mais informações entre em contato: 
+                <ul>
+                    <li>
+                        <p>aelsus@yahoo.com.br</p>
+                        <p>11-9 9999-9845</p>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="footer-direito">
+                <ul>
+
+                    <li>
+                        <a src="" href="https://github.com/Aelso" target="_blank">
+                            <img src="./assets/img/github.png" alt="Github">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/aelso-r-brito/" target="_blank">
+                            <img src="./assets/img/linkedin.png" alt="meu LinkedIn">
+                        </a>
+                    </li>
+
+                    <li>
+                        E-mail: <a href="mailto:aelsus@yahoo.com.br" target="_blank">
+                            <img src="./assets/img/email.png" alt="E-mail">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+
+<script type="text/javascript" src="./assets/js/script.js"></script>
+<script type="text/javascript" src="./assets/js/canva.js"></script>
+<script type="text/javascript" src="./assets/js/hangman.js"></script>
+
+</html>
