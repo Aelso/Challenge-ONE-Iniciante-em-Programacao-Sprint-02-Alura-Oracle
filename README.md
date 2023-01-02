@@ -1,7 +1,7 @@
 
 ## Challenge ONE - Iniciante em Programação - Sprint 02 - Crie seu próprio jogo da forca com Javascript 👣
 
-* **Primeiro desafio** da trilha de conhecimento Iniciante em Programação do **Programa ONE - Parceria entre Alura e Oracle**🤝
+* **Segundo desafio** da trilha de conhecimento Iniciante em Programação do **Programa ONE - Parceria entre Alura e Oracle**🤝
 * **Objetivo**:  O aluno deve criar um site de jogo da forca, implementando e colocando em prática todo o conhecimento adquirido na trilha🤔
 
 * **Materiais, Métodos e Ferramentas**:🧙 
