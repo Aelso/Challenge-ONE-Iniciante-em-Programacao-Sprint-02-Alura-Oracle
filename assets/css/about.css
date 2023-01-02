@@ -3,8 +3,8 @@
     color: var(--lightFucsia30);
 }
 
-#block:active {
-    scale: 1;
+#block:hover {
+    background-color: var(--lightFucsia10);
 }
 
 .bio {
@@ -14,54 +14,28 @@
     margin: 32px 0;
 }
 
-.bio img {
-    border-radius: 100%;
-    width: 368px;
-    height: 368px;
-    object-fit: cover;
-}
-
 .bio h2 {
-    font-size: 52px;
-    font-weight: 700;
-    line-height: 61px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 200;
+    line-height: 51px;
     align-self: stretch;
 }
 
 .bio p {
-    width: 80%;
-    margin: 15px 0;
     font-size: 15px;
-    line-height: 26px;
+    line-height: 18px;
+    font-weight:80;
+    text-align: center;
 }
-
-.bio nav ul {
-    display: flex;
-    list-style: none;
-    gap: 32px;
-}
-
-.bio nav li a {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.bio nav li a i {
-    font-size: 1.3rem;
-}
-
-.bio nav li a:hover {
-    color: var(--blue-500);
-}
-.skills, .hobbies {
+.skills {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 32px 0;
 }
 
-.skills h2, .hobbies h2{
+.skills h2{
     margin-bottom: 32px;
 }
 
@@ -79,8 +53,7 @@
 }
 
 .skills .box:hover {
-    scale: 1.03;
-    transition: 200ms;
+     transition: 200ms;
 }
 
 .skills .box i {
