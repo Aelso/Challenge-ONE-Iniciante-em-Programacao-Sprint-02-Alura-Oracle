@@ -1,123 +1,3 @@
-.experience {
-    width: 1136px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 32px;
-}
-
-.experience h2 {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 38px;
-    margin-bottom: 32px;
-}
-
-.experience-boxes {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 54px;
-}
-
-.experience-box-right {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 16px;
-}
-
-.experience-box-left {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 16px;
-    justify-content: space-around;
-}
-
-.experience-box__img {
-    width: 752px;
-    height: 406px;
-    object-fit: cover;
-    object-position: top;
-}
-
-.experience-box__content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    transition-duration: 200ms;
-}
-
-.experience-box__content h3 {
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 26px;
-}
-
-.experience-box__content a {
-    padding: 16px;
-}
-
-.experience-box__buttons {
-    margin-top: 20px;
-}
-
-.repositorio {
-    background: transparent;
-    border: 1px solid var(--lightFucsia50);
-    color: var(--lightFucsia50);
-}
-
-.demo {
-    background: var(--lightFucsia50);
-    color: var(--black-100);
-}
-
-.experience-guide {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    color: var(--lightFucsia50);
-    margin-bottom: 20px;
-    margin-top: 84px;
-}
-
-.experience-guide div {
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-
-.experience-guide .ativo {
-    font-weight: bold;
-    border-bottom: 2px solid var(--lightFucsia50);
-}
-
-.experience-guide .ativo:hover {
-    transition-duration: 200ms;
-    border-color: var(--lightFucsia30);
-    cursor: pointer;
-}
-
-.experience-guide i:hover,
-.experience-guide span:hover {
-    color: var(--lightFucsia30);
-    transition-duration: 200ms;
-    border-color: var(--lightFucsia30);
-    cursor: pointer;
-}
-
-.experience-guide i:active,
-.experience-guide span:active {
-    scale: 1;
-    transition-duration: 200ms;
-}
-
 #block {
     cursor: not-allowed;
     color: var(--lightFucsia30);
@@ -128,9 +8,9 @@
 }
 
 .bio {
-    display: flex;
+    width: 1136px;
     align-items: center;
-    gap: 50px;
+    gap: 30px;
     margin: 32px 0;
 }
 
@@ -149,9 +29,9 @@
 }
 
 .bio p {
-    width: 100%;
-    margin: 24px 0;
-    font-size: 22px;
+    width: 80%;
+    margin: 15px 0;
+    font-size: 15px;
     line-height: 26px;
 }
 
@@ -185,12 +65,11 @@
     margin-bottom: 32px;
 }
 
-.skills .boxes, .hobbies .boxes  {
-    display: flex;
+.skills .boxes{  display: flex;
     gap: 16px;
 }
 
-.skills .box, .hobbies .box {
+.skills .box{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -199,17 +78,19 @@
     padding: 16px;
 }
 
-.skills .box:hover, .hobbies .box:hover {
+.skills .box:hover {
     scale: 1.03;
     transition: 200ms;
 }
 
-.skills .box i, .hobbies .box i {
+.skills .box i {
     color: var(--blue-500);
     font-size: 24px;
 }
 
-.skills .box p, .hobbies .box p {
+.skills .box p {
+    font-size: 15px;
+    line-height: 26px;
    font-weight: 700;
 }
 
@@ -269,53 +150,31 @@
 
 @media screen and (min-width: 0) {
     .bio {
-        flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        padding: 0 10px;
+         padding: 0 10px;
     }
 
     .bio img {
         border-radius: 100%;
-        width: 280px;
-        height: 280px;
+        width: 150px;
+        height: 150px;
         object-fit: cover;
     }
 
-    .bio nav ul {
-        display: flex;
-        list-style: none;
-        gap: 32px;
-        flex-wrap: wrap;
-    }
-
     .bio h2 {
-        font-size: 40px;
+        font-size: 24px;
         font-weight: 700;
-        line-height: 42px;
+        line-height: 24px;
         align-self: stretch;
     }
-    
 }
 
 @media screen and (min-width: 768px) {
     .bio {
         flex-direction: row;
-        padding: 0 34px;
-        max-width: 1136px;
-    }
-
-    .bio img {
-        width: 146px;
-        height: 146px;
-    }
-
-    .bio nav ul {
-        display: flex;
-        list-style: none;
-        gap: 32px;
-        flex-wrap: wrap;
+        padding: 0 30px;
+        max-width: 1236px;
     }
 
     .bio h2 {
