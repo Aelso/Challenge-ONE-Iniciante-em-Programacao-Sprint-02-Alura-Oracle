@@ -19,9 +19,13 @@
 
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/guide-colors.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -42,48 +46,53 @@
 </header>
 
 <body>
-    <h1 class="title">Jogo da Forca - Alura</h1>
+    <div id="logof">
+        <img src="./assets/img/forca-logo.svg" alt="">
+        <h1>Jogo da
+            <div>Forca - Alura</div>
+        </h1>
+    </div>
+
     <main>
-        <div id="game">
-            <div class="textarea-buttons">
-                      <div class="warning">                 
-                    <p>Apenas letras minúsculas e sem acento.</p>
-                </div>        
+        <div id="start">
+            <div id="divNewGame"><button id="newGame">Começar jogo</button></div>
+            <button id="newWord">Adicionar palavra</button>
+        </div>
 
-
-            <div id="menu">
-                <button onclick="startGame()">Começar a jogar</button>
-                <button onclick="addWord()">Add nova palavra</button>
+        <div id="insertWord">
+            <textarea name="" placeholder="Digite uma palavra ou frase."></textarea>
+            <p>
+                <img src="assets/img/bi_exclamation-circle-fill.svg" alt="">
+                Máx. de 10 letras.
+            </p>
+            <div class="caixa_button">
+                <button id="save" class="buttonDark">Salvar</button>
+                <button id="cancel" class="buttonLight">Cancelar</button>
             </div>
+        </div>
 
-            <div id="new-word" style="display: none;">
-                <textarea name="textarea" id="inputNewWord" placeholder="Digite uma palavra ou frase."></textarea>
-                <button class="save-button" onclick="addNewWord()">Salvar palavra</button>
-                <button class="cancel-button" onclick="cancelAddWord()">Cancelar</button>
+        <div id="forca">
+            <canvas width="294" height="360"></canvas>
+            <div id="resultado"></div>
+            <div id="input"></div>
+            <a href="#" class="adpatarMobile" id="adaptarMobile">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                    <path
+                        d="M7 38q-1.2 0-2.1-.925Q4 36.15 4 35V13q0-1.2.9-2.1.9-.9 2.1-.9h34q1.2 0 2.1.9.9.9.9 2.1v22q0 1.15-.9 2.075Q42.2 38 41 38Zm0-3h34V13H7v22Zm8-3.25h18v-3H15Zm-4.85-6.25h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3Zm-24.7-6.25h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3Zm6.2 0h3v-3h-3Zm6.15 0h3v-3h-3ZM7 35V13v22Z" />
+                </svg>
+                <p>Abrir teclado.</p>
+                <input type="text" id="inputMobile">
+            </a>
+            <div id="wrongLetters"></div>
+            <div id="buttons">
+                <button id="newGame2" class="buttonDark">Novo Jogo</button>
+                <button id="desistir" class="buttonLight">Desistir</button>
             </div>
+        </div>
 
-            
 
-                <div class="new-word-buttons">
-                    <button onclick="startGame()">Começar jogo</button>
-                    <button onclick="cancelAddWord()">Cancelar</button>
-                </div>
-
-            </div>
-            <div id="game-over" style="display: none;">
-                <img src="./assets/img/!_icon.svg" alt="">
-                <h2 id="game-over-title"></h2>
-
-                <div id="start-game" style="display: none;">
-                    <div class="hangman-game">
-                        <canvas id="hangman" width="1400px" height="1000px"></canvas>
-                        <div class="game-buttons">
-                            <button onclick="startGame()">Novo jogo</button>
-                            <button onclick="giveUpGame()">Desistir</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div id="help">
+            <p id="help-content"></p>
         </div>
     </main>
 
@@ -134,7 +143,5 @@
     </footer>
 </body>
 <script type="text/javascript" src="./assets/js/script.js"></script>
-<script type="text/javascript" src="./assets/js/canva.js"></script>
-<script type="text/javascript" src="./assets/js/hangman.js"></script>
 
 </html>

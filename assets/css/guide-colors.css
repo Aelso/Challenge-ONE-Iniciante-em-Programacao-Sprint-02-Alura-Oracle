@@ -1,0 +1,25 @@
+:root {
+  /*Light Fucsia*/
+  --lightFucsia10: #fae0f3;
+  --lightFucsia20: #581e4a;
+  --lightFucsia30: #49183e;
+  --lightFucsia40: #3d1334;
+  --lightFucsia50: #22121e;
+
+
+    /*Dark Yellow*/
+    --darkYellow10: #F7CE68;
+    --darkYellow20: #d4b463;
+    --darkYellow30: #d3af55;
+    --darkYellow40: #c4a045;
+    --darkYellow50: #ac8b39;
+
+  
+    /*white*/
+    --white10:  linear-gradient(160deg, #ecc0c0 0%, #e2ecf0 50%, #50bbae 100%);
+    --white20: linear-gradient(160deg, #ecc0c0 0%, #949ea1 50%, #396661 100%);
+    --white30:  linear-gradient(160deg, #ecc0c0 0%, #767f83 50%, #1d3a36 100%);
+    --white40: linear-gradient(160deg, #ecc0c0 0%, #4c6068 50%, #144e47 100%);
+    --white50: linear-gradient(160deg, #ecc0c0 0%, #5b7d8a 50%, #031a17 100%);
+
+}
