@@ -16,65 +16,63 @@
 
 .bio h2 {
     text-align: center;
-    font-size: 32px;
-    font-weight: 200;
+    font-size: 25px;
+    font-weight: 150;
     line-height: 51px;
     align-self: stretch;
 }
 
 .bio p {
-    font-size: 15px;
-    line-height: 18px;
-    font-weight:80;
+    font-size: 20px;
+    line-height: 20px;
+    font: weight 100px;
+    ;
     text-align: center;
 }
+
 .skills {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 32px 0;
+    padding: 0 34px;
 }
 
-.skills h2{
+.skills h2 {
     margin-bottom: 32px;
 }
 
-.skills .boxes{  display: flex;
-    gap: 16px;
+.skills .boxes {
+    display: flex;
+    gap: 10px;
 }
 
-.skills .box{
+.skills .box {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 8px;
+    gap: 5px;
     background: #ffffff;
-    padding: 16px;
+    padding: 12px;
 }
 
 .skills .box:hover {
-     transition: 200ms;
+    transition: 200ms;
 }
 
 .skills .box i {
-    color: var(--blue-500);
+    color: var(--lightFucsia30);
     font-size: 24px;
 }
 
-.skills .box p {
-    font-size: 15px;
-    line-height: 26px;
-   font-weight: 700;
-}
-
-
 @media screen and (min-width: 0) {
-    .skills, .hobbies {
+    .skills {
         padding: 0 10px;
         width: 100%;
         max-width: 1136px;
     }
-    .skills .boxes, .hobbies .boxes  {
+
+    .skills .boxes {
         display: flex;
         justify-content: center;
         gap: 10px;
@@ -82,40 +80,38 @@
         width: 100%;
     }
 
-    .skills .box, .hobbies .box {
+    .skills .box {
         width: calc(50% - 10px);
     }
 }
 
 @media screen and (min-width: 768px) {
-    .skills, .hobbies {
+    .skills {
         padding: 0 34px;
     }
 
-    .skills .boxes, .hobbies .boxes  {
+    .skills .boxes {
         gap: 16px;
     }
 
-    .skills .box, .hobbies .box {
+    .skills .box {
         width: calc(33% - 16px);
         height: 174px;
     }
 }
 
-@media screen and (min-width: 1024px) {
-
-}
+@media screen and (min-width: 1024px) {}
 
 @media screen and (min-width: 1170px) {
-    .skills, .hobbies  {
+    .skills {
         padding: 0 0;
     }
 
-    .skills .boxes, .hobbies .boxes  {
+    .skills .boxes {
         flex-wrap: nowrap;
     }
 
-    .skills .box, .hobbies .box {
+    .skills .box {
         width: calc(100%/6 - 16px);
     }
 
@@ -125,7 +121,7 @@
     .bio {
         justify-content: center;
         align-items: center;
-         padding: 0 10px;
+        padding: 0 10px;
     }
 
     .bio img {
@@ -158,10 +154,7 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
-
-}
-
+@media screen and (min-width: 1024px) {}
 
 @media screen and (min-width: 1170px) {
     .bio {
@@ -178,6 +171,7 @@
         line-height: 61px;
     }
 }
+
 @media screen and (min-width: 0) {
     .experience {
         width: 100%;
