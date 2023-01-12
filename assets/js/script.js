@@ -20,17 +20,17 @@ function textToArray(x) {
 }
 
 function msgAjuda(texto, tempo, cor) {
-    
+
     let help = document.getElementById("help-content")
     help.innerHTML = texto
     help.style.color = cor
-    
-    setTimeout(e=>{
+
+    setTimeout(e => {
         help.innerHTML = ""
     }, tempo)
 }
 
-newGame.addEventListener("click", e=> {
+newGame.addEventListener("click", e => {
     let buttonNovoJogo = document.getElementById("newGame2")
     let buttonDesistir = document.getElementById("desistir")
     let LetrasErradas = document.getElementById("wrongLetters")
@@ -67,12 +67,12 @@ newGame.addEventListener("click", e=> {
     }
 
     buttonNovoJogo.setAttribute("disabled", "true")
-    buttonDesistir.addEventListener ("click", desistir)
+    buttonDesistir.addEventListener("click", desistir)
 
     body.addEventListener("click", e => {
         if (e.target.localName === "p" || e.target.localName === "path" || e.target.localName === "svg") {
-                body.removeEventListener("keydown", escutaTecla)
-                adaptarMobile.addEventListener("click", e => {
+            body.removeEventListener("keydown", escutaTecla)
+            adaptarMobile.addEventListener("click", e => {
                 inputMobile.focus()
                 inputMobile.addEventListener("keydown", escutaTecla)
             })
@@ -82,8 +82,8 @@ newGame.addEventListener("click", e=> {
         }
     })
 
-    
-    
+
+
 
     let textArray = textToArray(text)
     let arrayVerificador = []
@@ -98,14 +98,14 @@ newGame.addEventListener("click", e=> {
     desenhaForca()
 
     let input = document.getElementById("input")
-    
+
     for (let i = 0; i < textArray.length; i++) {
         newDivs += `<div class="letter" id="letter${i}"></div>`
     }
 
 
     input.innerHTML = newDivs
-    
+
     function desistir() {
         button(1)
         ocultaLogo("não")
@@ -132,47 +132,47 @@ newGame.addEventListener("click", e=> {
         limpaTela()
         body.removeEventListener("keydown", escutaTecla)
     }
-    
+
     function escutaTecla(e) {
-    let letter = e.key.toUpperCase()
+        let letter = e.key.toUpperCase()
 
-       if (arrayLetrasDigitadas.indexOf(letter) < 0) {
-        
-        if(textArray.indexOf(letter) > -1){
-            for(let i=0; i<textArray.length; i++) {
-                if(textArray[i] === letter) {
-                    document.getElementById(`letter${i}`).innerText = letter
+        if (arrayLetrasDigitadas.indexOf(letter) < 0) {
 
-                    arrayVerificador[i] = letter
-                    contador++
+            if (textArray.indexOf(letter) > -1) {
+                for (let i = 0; i < textArray.length; i++) {
+                    if (textArray[i] === letter) {
+                        document.getElementById(`letter${i}`).innerText = letter
 
-                    if (arrayVerificador.length === textArray.length && textArray.length === contador && text !== "") {
-                        buttonNovoJogo.removeAttribute("disabled")
-                        buttonDesistir.setAttribute("disabled", "true")
-                        resultado.style.display = "block"
-                        resultado.innerText = "Você venceu!"
-                        resultado.setAttribute("id", "resultado")
-                        fim = true
+                        arrayVerificador[i] = letter
+                        contador++
 
-                        buttonNovoJogo.addEventListener("click", novoJogo)
+                        if (arrayVerificador.length === textArray.length && textArray.length === contador && text !== "") {
+                            buttonNovoJogo.removeAttribute("disabled")
+                            buttonDesistir.setAttribute("disabled", "true")
+                            resultado.style.display = "block"
+                            resultado.innerText = "Você venceu!"
+                            resultado.setAttribute("id", "resultado")
+                            fim = true
+
+                            buttonNovoJogo.addEventListener("click", novoJogo)
+                        }
                     }
                 }
-            }
-            
-        } else if (text !== "" && fim === false){
+
+            } else if (text !== "" && fim === false) {
                 chamaForca(nTentativa)
                 nTentativa--
-                
+
 
                 LetrasErradas.innerHTML += `<div class="wLetter">${letter}</div>`
 
-                if(nTentativa === 0) {
+                if (nTentativa === 0) {
                     resultado.style.display = "block"
                     resultado.innerText = "Você perdeu!"
                     buttonNovoJogo.removeAttribute("disabled")
                     buttonDesistir.setAttribute("disabled", "true")
                     buttonNovoJogo.addEventListener("click", novoJogo)
-                    
+
                     text = ""
                     nTentativa = 6
                     contador = 0
@@ -180,25 +180,25 @@ newGame.addEventListener("click", e=> {
 
 
 
-                    for(let i = 0; i < textArray.length; i++) {
-                        if(textArray[i] != arrayVerificador[i]) {
-                            document.getElementById(`letter${i}`).style.color="#B3888E"
+                    for (let i = 0; i < textArray.length; i++) {
+                        if (textArray[i] != arrayVerificador[i]) {
+                            document.getElementById(`letter${i}`).style.color = "#B3888E"
                             document.getElementById(`letter${i}`).innerText = textArray[i]
                         }
                     }
                 }
-        }
+            }
 
-        arrayLetrasDigitadas.push(letter)
-        
-       } else {
+            arrayLetrasDigitadas.push(letter)
 
-            if(fim === false) {
+        } else {
+
+            if (fim === false) {
                 msgAjuda("Você já utilizou esta letra!", 2000, "var(--lightBlue500)")
             }
-        
-       }
-    
+
+        }
+
     }
 
 })
@@ -215,25 +215,25 @@ textArea.addEventListener("blur", e => {
     textArea.setAttribute("placeholder", "Digite uma palavra ou frase.")
 })
 
-saveText.addEventListener("click", e => {  
-   
-   if (textArea.value !== "" && textArea.value.length <= 10) {
-    text = textArea.value;
-    alternaTela(1)
-    enableButton()
-    msgAjuda("Tudo pronto para começar!", 3000, "var(--lightBlue500)")
-    textArea.value = ""
-   } else if (textArea.value !== "" && textArea.value.length > 10) {
-    msgAjuda("Máximo de 10 letras!", 3000, "var(--lightBlue500)")
-   } else {
-    msgAjuda("O campo não pode estar vazio!", 3000, "var(--lightBlue500)")
-   }
+saveText.addEventListener("click", e => {
 
-   
+    if (textArea.value !== "" && textArea.value.length <= 10) {
+        text = textArea.value;
+        alternaTela(1)
+        enableButton()
+        msgAjuda("Tudo pronto para começar!", 3000, "var(--lightBlue500)")
+        textArea.value = ""
+    } else if (textArea.value !== "" && textArea.value.length > 10) {
+        msgAjuda("Máximo de 10 letras!", 3000, "var(--lightBlue500)")
+    } else {
+        msgAjuda("O campo não pode estar vazio!", 3000, "var(--lightBlue500)")
+    }
+
+
 })
 
 function enableButton() {
-    if(text === "") {
+    if (text === "") {
         newGame.setAttribute("disabled", "false")
     } else {
         newGame.removeAttribute("disabled")
@@ -243,7 +243,7 @@ function enableButton() {
 divNewGame.addEventListener("mouseenter", e => {
     if (newGame.getAttribute("disabled") !== null) {
         msgAjuda("Não há palavras para começar!", 2000, "var(--lightBlue500)")
-    }  
+    }
 })
 
 cancel.addEventListener("click", e => {
@@ -258,7 +258,7 @@ enableButton()
 
 
 function alternaTela(numero_tela) {
-    switch(numero_tela) {
+    switch (numero_tela) {
         case 1:
             start.style.display = "flex";
             insertWord.style.display = "none";
@@ -300,7 +300,7 @@ function desenhaCorpo() {
 function desenhaBracoDireito() {
     pincel.beginPath();
     pincel.moveTo(251, 120);
-    pincel.lineTo(211,170);
+    pincel.lineTo(211, 170);
     pincel.lineWidth = 4
     pincel.strokeStyle = "#0A3871"
     pincel.stroke();
@@ -308,7 +308,7 @@ function desenhaBracoDireito() {
 function desenhaBracoEsquerdo() {
     pincel.beginPath();
     pincel.moveTo(252, 120);
-    pincel.lineTo(292,170);
+    pincel.lineTo(292, 170);
     pincel.lineWidth = 4
     pincel.strokeStyle = "#0A3871"
     pincel.stroke();
@@ -334,16 +334,16 @@ function desenhaPernaDireita() {
 function desenhaCabeca() {
     pincel.fillStyle = "#0A3871"
     pincel.beginPath();
-    pincel.arc(250, 80, 31.5, 0, 2*Math.PI)
+    pincel.arc(250, 80, 31.5, 0, 2 * Math.PI)
     pincel.fill()
     pincel.beginPath();
     pincel.fillStyle = "#F3F5FC"
-    pincel.arc(250, 80, 27.5, 0, 2*Math.PI)
+    pincel.arc(250, 80, 27.5, 0, 2 * Math.PI)
     pincel.fill()
 }
-    
+
 function chamaForca(x) {
-    switch(x) {
+    switch (x) {
         case 6:
             desenhaCabeca()
             break;

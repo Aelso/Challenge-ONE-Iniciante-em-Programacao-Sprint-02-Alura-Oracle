@@ -39,6 +39,7 @@
 
 .skills h2 {
     margin-bottom: 32px;
+    font-size: 25px;
 }
 
 .skills .boxes {
@@ -47,6 +48,7 @@
 }
 
 .skills .box {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -61,7 +63,8 @@
 
 .skills .box i {
     color: var(--lightFucsia30);
-    font-size: 30px;
+    font-size: 100px; /* 100px */
+ 
 }
 
 @media screen and (min-width: 0) {
